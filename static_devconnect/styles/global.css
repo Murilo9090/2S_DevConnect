@@ -35,8 +35,8 @@ h1{
 }
 
 input{
-    width: 100%;
+    width: 100%; 
     height: 35px;
     border: var(--borda);
-    background-color: var(--cor-cinza);
+    background-color: var(--cor-branco);
 }
