@@ -1,56 +1,62 @@
-main{
+
+main {
     width: 100%;
-    min-height: 100vh;/*Altura da janela do meu dispositivo*/
-    background-color: aqua;
+    min-height: 100vh; /* altura da tela inteira */
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main > div{
-    background-color: blueviolet;
+main > div {
+    background-color: #FFFFFF;
     width: 50%;
-    height: 500px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
 
-/* formulario */
-#formulario{
-       height: 300px;
-   /* background-color: red;*/
-}
-#secao-cadastro{
-    width: 100px;
-    height: 100px;
-   /* background-color: blue;*/
+/* Formulário */
+#formulario {
+    min-height: 300px;
+    /* background-color: red; */
 }
 
-.estilo-formulario{
-    border: var(--borda);
+#secao-cadastro {
+    width: 100px;
+    height: 100px;
+    /* background-color: blue; */
+}
+
+.estilo-formulario {
+    /* border: var(--borda); */
     width: 100%;
     max-width: 340px;
     background-color: var(--cor-branco);
 }
 
-
-
-.informacao-aplicativo{
+/* Informação do aplicativo */
+.informacao-aplicativo {
     background-color: chocolate;
     font-size: var(--tamanho-fonte-sm);
-    color: var(--cor-preto);
+    color: var(--cor-branco);
     font-weight: 400;
+    
 }
-#secao-instalacao{
+
+/* Seção de instalação (botões) */
+#secao-instalacao {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-#secao-instalacao img{
-    width: 133px;
+#secao-instalacao img {
+    width: 133; 
     height: 39px; 
 }
+
+
+
