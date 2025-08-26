@@ -1,53 +1,42 @@
-
 main {
     width: 100%;
-    min-height: 100vh; /* altura da tela inteira */
-   /* background-color: aqua;*/
+    min-height: 100vh; /* altura da tela inteira */ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 main > div {
-    /*background-color: blueviolet;*/
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
-
 /* Formulário */
 #formulario {
-    min-height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     align-content: center;
     padding: 3%;
     gap: 10px;
-    
-    /* background-color: red; */
 }
 
 #secao-cadastro {
-   /*width: 100px;*/
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* background-color: blue; */
-}
-
-.estilo-formulario {
+    /*width: 100px;*/
+     height: 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .estilo-formulario {
     border: var(--borda);
     width: 100%;
     max-width: 340px;
     background-color: var(--cor-branco);
-}
-
-#formulario > div{
+ }
+ #formulario > div{
     width: 100%;
     
 }
@@ -65,11 +54,10 @@ main > div {
 }
 
 #formulario > p{
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: var(--tamanho-fonte-sm);
     color: var(--cor-cinza); 
 }
-
 #formulario > a, #secao-cadastro > p > a{
     text-decoration: none;
     color: var(--cor-azul);
@@ -78,26 +66,4 @@ main > div {
 #secao-cadastro > p{
     font-size: var(--tamanho-fonte-md);
 
-}
-
-/* Informação do aplicativo */
-.informacao-aplicativo {
-    /*background-color: chocolate;*/
-    font-size: var(--tamanho-fonte-sm);
-    color: var(--cor-preto);
-    font-weight: 400;
-    
-}
-
-/* Seção de instalação (botões) */
-#secao-instalacao {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-#secao-instalacao img {
-    width: 133; 
-    height: 39px; 
 }
