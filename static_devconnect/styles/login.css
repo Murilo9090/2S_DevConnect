@@ -84,7 +84,7 @@ main > div {
 .informacao-aplicativo {
     /*background-color: chocolate;*/
     font-size: var(--tamanho-fonte-sm);
-    color: var(--cor-preto);
+    color: var(--cor-branco);
     font-weight: 400;
     
 }
@@ -101,3 +101,6 @@ main > div {
     width: 133; 
     height: 39px; 
 }
+
+
+
