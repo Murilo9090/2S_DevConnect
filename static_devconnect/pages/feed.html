@@ -25,7 +25,7 @@
             </a>
 
             <a id="logo-mobile" href="./feed.html">
-                <img src="../images/logo-devconnect-3.svg" alt="Logo da empresa DevConnect">
+                <img src="../images/logo-devconnect- 3.svg" alt="Logo da empresa DevConnect">
             </a>
 
             <div class="cabecalho-acoes">
@@ -38,7 +38,7 @@
                 </a>
 
                 <a href="#">
-                    <img id="foto-perfil" src="../images/images.jpg" alt="Foto de perfil">
+                    <img class="foto-perfil" src="../images/images.jpg" alt="Foto de perfil">
                 </a>
             </div>
         </nav>
@@ -121,25 +121,60 @@
                         <span>2pac</span>
                     </a>
                 </article>
-                
+
             </section>
 
             <section id="cadastro-publi" class="estilo-formulario">
                 <h2>Publicação</h2>
-                
-                <form action="">
-                    <textarea name="" id=""></textarea>
 
-                    <div>
+                <form action="">
+                    <textarea name="" id="" placeholder="Digite a descrição do post..."></textarea>
+
+                    <footer>
                         <div>
-                            <label for="file" class="btn-upload">📂 Fazer upload da imagem</label>
-                            <input type="file" id="file" hidden>
+                            <label for="campo-upload" id="texto-upload">Fazer upload da imagem...</label>
+                            <input type="file" name="" id="campo-upload">
                         </div>
-                        <button type="submit" class="formulario-botao-azul">Entrar</button>
-                    </div>
+                        <button type="submit" class="formulario-botao-azul">Postar</button>
+                    </footer>
                 </form>
 
-                
+
+            </section>
+
+            <section id="publicacoes">
+                <article class="card-publi">
+                    <header>
+                        <a href="#">
+                            <img class="foto-perfil" src="../images/images.jpg" alt="Foto do usuário 2pac">
+                            <span>2pac</span>
+                            <img src="" alt="">
+                        </a>
+                    </header>
+
+                    <figure>
+                        <img class="imagem-publicacao" src="../images/Pac.jpg" alt="">
+
+                        <figcaption class="descricao-publicacao">
+                            2pac
+                            <p>new photo guys</p>
+                        </figcaption>
+
+                        <div class="interacoes-publicacao">
+                            <button>
+                                <img src="../images/icone-coracao-preto 2.svg" alt="">
+                            </button>
+                            <button>
+                                <img src="../images/icone-comentario-preto.svg" alt="">
+                            </button>
+                            <span>12M Curtidas</span>
+
+                        </div>
+
+                    </figure>
+                   <button type="button">Ver mais comentarios</button>
+                   
+                </article>
             </section>
 
         </div>
