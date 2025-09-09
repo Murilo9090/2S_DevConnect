@@ -55,11 +55,10 @@ main>header {
     justify-content: center;
 }
 
-.perfil-pic {
+.perfil-foto {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    border: 3px solid white;
 }
 
 .perfil-info h2 {
@@ -70,6 +69,7 @@ main>header {
 
 .perfil-info p {
     margin: 5px 0;
+    display: inline;
 }
 
 .botao {
@@ -96,10 +96,12 @@ main>header {
 }
 
 /* Publicações */
-.publicacoes {
+.publicacoes-card{ 
+    background-color: var(--cor-branco);
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
+    border: var(--borda);
 }
 
 .publicacoes > h2 {
@@ -111,10 +113,8 @@ main>header {
 }
 
 .publicacoes {
-    background-color: var(--cor-branco);
     padding: 15px;
     margin-bottom: 20px;
-    border: var(--borda);
 }
 
 .publicacoes > h3 {
@@ -133,8 +133,8 @@ main>header {
     font-size: 14px;
 }
 
-.publicacoes > a {
+.publicacoes-card > a {
     font-size: 14px;
     color: var(--cor-cinza);
-    text-decoration: none;
+    text-decoration:none;
 }
