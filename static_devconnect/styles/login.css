@@ -1,7 +1,7 @@
 
 main {
-    min-height: 100vh;
     /*minimo de altura da janela do dispositivo*/
+    min-height: 100vh;
     width: 100%;
     display: flex;
     /*ativa o flex*/
@@ -67,6 +67,7 @@ form>a, #secao-cadastro > p > a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 main>div>p {
