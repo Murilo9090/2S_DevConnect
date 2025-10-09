@@ -1,20 +1,52 @@
---DML
-USE Devconnect;
+USE db_Devconnect_;
 
-INSERT INTO tb_usuario (nome_completo,nome_usuario,email,senha,foto_perfil_url)
-VALUES('Tupac Shakur', '2pac' , '2pac@gmail.com', 123, '2pac' );
 
-SELECT * FROM tb_usuario
+-- Inserindo usuários
+INSERT INTO tb_usuario (nomeCompleto, nomeDeUsuario, email, senha, fotoPerfilUrl)
+VALUES 
+('Tupac Shakur', '2pac', '2pac@gmail.com', '123', '2pac.jpg'),
+('Snoop Dogg', 'Snoop', 'snoopdog@gmail.com', '1234', 'dog.jpg'),
+('Curtis James', '50cent', '50cent@gmail.com', '823', '50cent.url'),
+('Eric Lynn', 'Eazy-E', 'eazy@gmail.com', '234', 'Eazy-E.url'),
+('Shea Jackson', 'IceCube', 'icecube@gmail.com', '567', 'icecube.url');
 
-INSERT INTO tb_publi (descricao,imagem_url,data_publi)
-VALUES('2pac' , '2pac.url', '2025-01-11' );
+SELECT * FROM tb_usuario;
 
-SELECT * FROM tb_publi
+-- Inserindo publicações (é necessário o id_usuario!)
+INSERT INTO tb_publicacao (descricao, imagemUrl, data_Publicacao, id_usuario)
+VALUES 
+('Nova música lançada hoje!', '2pac.url', '2025-01-11', 31),
+('Trabalhando em um novo álbum!', 'snoop.url', '2025-02-02', 32),
+('Treinando no estúdio', '50cent.url', '2025-03-05', 33),
+('Lembrando os velhos tempos', 'eazye.url', '2025-04-10', 34);
 
-INSERT INTO tb_comentario(texto, data_comentario, id_usuario, id_publi)
-VALUES('2PAC', '2025-01-11', '4', '1')
+SELECT * FROM tb_publicacao;
+
+
+-- Inserindo curtidas (somente IDs!)
+INSERT INTO tb_curtida (id_usuario, id_publicacao)
+VALUES 
+(31, 32),  -- Tupac curtiu a publicação do Snoop
+(32, 31),  -- Snoop curtiu a publicação do Tupac
+(33, 31);  -- 50cent curtiu a publicação do Tupac
+
+SELECT * FROM tb_curtida
+
+-- Inserindo comentários
+INSERT INTO tb_comentario (texto, dataComentario, id_publicacao, id_usuario)
+VALUES 
+('Clássico!', '2025-01-11', 4, 5),
+('Boa demais!', '2025-01-12', 5, 4),
+('Essa ficou braba!', '2025-01-15', 6, 34);
 
 SELECT * FROM tb_comentario
 
-DELETE FROM tb_comentario
-WHERE id = 1
+-- Inserindo seguidores (auto-relacionamento)
+INSERT INTO tb_seguidor (id_usuario_seguidor, id_usuario_seguido)
+VALUES 
+(31, 32),  -- Tupac segue Snoop
+(32, 31),  -- Snoop segue Tupac
+(33, 31),  -- 50cent segue Tupac
+(34, 33);  -- Eazy-E segue 50cent
+
+SELECT * FROM tb_seguidor
