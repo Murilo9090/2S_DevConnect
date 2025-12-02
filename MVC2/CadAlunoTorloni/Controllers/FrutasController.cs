@@ -14,7 +14,7 @@ namespace CadAlunoTorloni.Controllers
             _logger = logger;
         }
 
-        private List<Fruta> frutas = new List<Fruta>
+        private static List<Fruta> frutas = new List<Fruta>
         {
             new Fruta{Id = 1, Nome = "Maça", Cor = "Vermelha", Categoria = "Tropical" },
             new Fruta{Id = 2, Nome = "Banana", Cor = "Amarela", Categoria = "Tropical" },

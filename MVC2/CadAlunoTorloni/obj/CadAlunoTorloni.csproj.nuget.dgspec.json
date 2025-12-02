@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47649489825\\Desktop\\BackEnd\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj": {}
+    "C:\\Users\\47649489825\\Desktop\\2S_DevConnect\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47649489825\\Desktop\\BackEnd\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj": {
+    "C:\\Users\\47649489825\\Desktop\\2S_DevConnect\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47649489825\\Desktop\\BackEnd\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj",
+        "projectUniqueName": "C:\\Users\\47649489825\\Desktop\\2S_DevConnect\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj",
         "projectName": "CadAlunoTorloni",
-        "projectPath": "C:\\Users\\47649489825\\Desktop\\BackEnd\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj",
+        "projectPath": "C:\\Users\\47649489825\\Desktop\\2S_DevConnect\\MVC2\\CadAlunoTorloni\\CadAlunoTorloni.csproj",
         "packagesPath": "C:\\Users\\47649489825\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47649489825\\Desktop\\BackEnd\\MVC2\\CadAlunoTorloni\\obj\\",
+        "outputPath": "C:\\Users\\47649489825\\Desktop\\2S_DevConnect\\MVC2\\CadAlunoTorloni\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\47649489825\\AppData\\Roaming\\NuGet\\NuGet.Config",
