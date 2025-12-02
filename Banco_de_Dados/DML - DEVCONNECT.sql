@@ -26,18 +26,18 @@ SELECT * FROM tb_publicacao;
 -- Inserindo curtidas (somente IDs!)
 INSERT INTO tb_curtida (id_usuario, id_publicacao)
 VALUES 
-(31, 32),  -- Tupac curtiu a publicação do Snoop
-(32, 31),  -- Snoop curtiu a publicação do Tupac
-(33, 31);  -- 50cent curtiu a publicação do Tupac
+(31, 4),  -- Tupac curtiu a publicação do Snoop
+(32, 5),  -- Snoop curtiu a publicação do Tupac
+(33, 6);  -- 50cent curtiu a publicação do Tupac
 
 SELECT * FROM tb_curtida
 
 -- Inserindo comentários
 INSERT INTO tb_comentario (texto, dataComentario, id_publicacao, id_usuario)
 VALUES 
-('Clássico!', '2025-01-11', 4, 5),
-('Boa demais!', '2025-01-12', 5, 4),
-('Essa ficou braba!', '2025-01-15', 6, 34);
+('Clássico!', '2025-01-11', 5,31 ),
+('Boa demais!', '2025-01-12', 4,32 ),
+('Essa ficou braba!', '2025-01-15', 6,33 );
 
 SELECT * FROM tb_comentario
 
