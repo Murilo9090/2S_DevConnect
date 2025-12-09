@@ -1,26 +1,29 @@
 <h1>Pagina de Feed</h1>
+@{
+    ViewData["Title"] = "DevConnect - Feed";
+}
 <link rel="stylesheet" href=~/css/feed.css">
 <body>
     <header id="cabecalho">
         <nav>
-            <a id="logo-desktop" href="./feed.html">
+            <a id="logo-desktop" asp-controller="Home"asp-action="Index">
                 <img src="../images/logo-devconnect- 2.svg" alt="Logo da empresa DevConnect">
             </a>
 
-            <a id="logo-mobile" href="./feed.html">
+            <a id="logo-mobile" asp-controller="home"asp-action="Index">
                 <img src="../images/logo-devconnect- 3.svg" alt="Logo da empresa DevConnect">
             </a>
 
             <div class="cabecalho-acoes">
-                <a href="#">
+                <a asp-controller="Home"asp-action="Index">
                     <img src="../images/icone-casa-vermelho.svg" alt="Ícone de casa">
                 </a>
 
                 <a href="#">
                     <img src="../images/icone-coracao-vermelho.svg" alt="Ícone de um coração">
                 </a>
-
-                <a href="#">
+                
+                <a asp-controller="Perfil"asp-action="Index">
                     <img class="foto-perfil" src="../images/images.jpg" alt="Foto de perfil">
                 </a>
             </div>
@@ -126,7 +129,7 @@
             <section id="publicacoes">
                 <article class="card-publi">
                     <header>
-                        <a href="#">
+                        <a <a asp-controller="Perfil"asp-action="Index">
                             <img class="foto-perfil" src="../images/images.jpg" alt="Foto do usuário 2pac">
                             <span>2pac</span>
                             <img src="" alt="">

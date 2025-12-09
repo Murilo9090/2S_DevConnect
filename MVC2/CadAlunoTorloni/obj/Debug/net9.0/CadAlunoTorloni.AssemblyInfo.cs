@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadAlunoTorloni")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eed3273a83c24a7827ff5ead940bc91b7d9fc138")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15b4a54a8b9c1fa99e9be44f04e8fe6f83a1f0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadAlunoTorloni")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadAlunoTorloni")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

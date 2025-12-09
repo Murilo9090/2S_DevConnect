@@ -1,57 +1,57 @@
-
+using System.Threading.Tasks;
 using CadAlunoTorloni.Models;
 using Microsoft.AspNetCore.Mvc;
-
-
+using Microsoft.EntityFrameworkCore;
 namespace CadAlunoTorloni.Controllers
 {
-    
-    public class AlunoController : Controller
-    {
-        private readonly ILogger<AlunoController> _logger;
+public class AlunosController : Controller
+{
+    private readonly ILogger<AlunosController> _logger;
 
-        public AlunoController(ILogger<AlunoController> logger)
+
+        // private static List<Aluno> Alunos = new List<Aluno> 
+        // {
+        //     new Aluno{ Id = 1, Nome = "Murilo", Idade = "17"},
+        //     new Aluno{ Id = 2, Nome = "Davi", Idade = "14"},
+        //     new Aluno{ Id = 3, Nome = "Maria", Idade = "42"},
+        //     new Aluno{ Id = 4, Nome = "Nunes", Idade = "45"},
+        //     new Aluno{ Id = 5, Nome = "Henrique", Idade = "26"},
+        // };
+
+        private readonly CadAlunoTorloniContext _context;
+        private readonly CadAlunoTorloniContext _Logger;
+        public AlunosController(ILogger<AlunosController> logger, CadAlunoTorloniContext context)
         {
             _logger = logger;
-        } 
-        private static List<Alunos> alunos = new List<Alunos>
-        {
-            new Alunos{Id = 1, Nome = "Murilo", Idade = 16, Cpf = "476487874-25" },
-            new Alunos{Id = 2, Nome = "Pedro", Idade = 17, Cpf = "476826474-25" },
-            new Alunos{Id = 3, Nome = "Davi", Idade = 17, Cpf = "476801274-25"},
-            new Alunos{Id = 4, Nome = "Henrique", Idade = 17, Cpf = "476982374-25"},
-            new Alunos{Id = 5, Nome = "Samuel", Idade = 17, Cpf = "476492064-25"}
-        };
+            _context = context;
+        }
+    
+        //         public IActionResult Index()
+        // {
+        //         return View(Alunos);
+        // }
 
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var alunos = await _context.Alunos.ToListAsync();
             return View(alunos);
         }
-        public IActionResult Create()
+
+        [HttpGet ]
+        public async Task<IActionResult>  Create( )
         {
             return View();
         }
-         [HttpPost]
-        public IActionResult Create(Alunos aluno)
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Aluno aluno)
         {
-            aluno.Id = alunos.Max(f => f.Id) + 1;
+            // aluno.Id = Alunos.Max(a => a.Id) + 1;
             
-            alunos.Add(aluno);
-
-            return RedirectToAction("Index");
+            // Alunos.Add(aluno);
+            _context.Add(aluno);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof (Index));
         }
-        public IActionResult Aluno()
-        {
-            return View(alunos);
-        }
-
-      
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
-    }
+}
 }

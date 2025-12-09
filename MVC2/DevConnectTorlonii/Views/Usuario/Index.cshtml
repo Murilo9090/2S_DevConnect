@@ -1,0 +1,52 @@
+@model DevConnectTorlonii.Models.TbUsuario
+<link rel="stylesheet" href="../css/cadastro.css">
+
+<script defer>
+    const usuarioNovoCadastrado = "@ViewBag.UsuarioNovoCadastrado";
+
+    if(usuarioNovoCadastrado == "Nao cadastrado"){
+        alert("Usuario não cadastrado! Tente Novamente")
+    }
+
+</script>
+
+<body>
+    <h1>Tela principal Cadastro</h1>
+    <main>
+        <div>
+            <!--formulário-->
+            <form id="formulario" class="estilo-formulario" enctype="multipart/form-data" asp-action="Index" asp-controller="Usuario">
+                <img src="../images/DevConnect - Vermelho.svg" alt="Logo da DevConnect">
+                <div>
+                    <label for="usuario">Nome e sobrenome:</label>
+                    <input type="text" asp-for="NomeCompleto">
+                </div>
+
+                <div>
+                    <label for="usuario">Nome do usuario:</label>
+                    <input type="text" asp-for="NomeDeUsuario">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" asp-for="Email">
+                </div>
+
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" asp-for= "Senha">
+                </div>
+
+                <label for="campo-upload" id="texto-upload">Fazer upload da imagem...</label>
+                <input type="file" name="imagem" id="campo-upload">
+
+                <button type="submit" class="formulario-botao-azul">Cadastre-se</button>
+
+                <p>ao se cadastrar,voce concorda com nossos Termos,Politica de Dados e Política de Dados e Politica de Cookies</p>
+               </form>
+                <section id="secao-cadastro" class="estilo-formulario">
+                    <p>tem uma conta? <a asp-controller="Home"asp-action="Index">Conecte-se</a></p>
+                </section>
+            </div>
+        </main>
+</body>

@@ -1,5 +1,6 @@
 using CadAlunoTorloni.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace CadAlunoTorloni.Controllers
@@ -9,22 +10,27 @@ namespace CadAlunoTorloni.Controllers
     {
         private readonly ILogger<FrutasController> _logger;
 
-        public FrutasController(ILogger<FrutasController> logger)
+        public readonly CadAlunoTorloniContext _context;
+
+
+        public FrutasController(ILogger<FrutasController> logger, CadAlunoTorloniContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        private static List<Fruta> frutas = new List<Fruta>
-        {
-            new Fruta{Id = 1, Nome = "Maça", Cor = "Vermelha", Categoria = "Tropical" },
-            new Fruta{Id = 2, Nome = "Banana", Cor = "Amarela", Categoria = "Tropical" },
-            new Fruta{Id = 3, Nome = "Uva", Cor = "Roxa", Categoria = "Tropical"},
-            new Fruta{Id = 4, Nome = "Limão", Cor = "Verde", Categoria = "Citrica"},
-            new Fruta{Id = 5, Nome = "Abacaxi", Cor = "Amarelo", Categoria = "Citrica"}
-        };
+        // private static List<Fruta> frutas = new List<Fruta>
+        // {
+        //     new Fruta{Id = 1, Nome = "Maça", Cor = "Vermelha", Categoria = "Tropical" },
+        //     new Fruta{Id = 2, Nome = "Banana", Cor = "Amarela", Categoria = "Tropical" },
+        //     new Fruta{Id = 3, Nome = "Uva", Cor = "Roxa", Categoria = "Tropical"},
+        //     new Fruta{Id = 4, Nome = "Limão", Cor = "Verde", Categoria = "Citrica"},
+        //     new Fruta{Id = 5, Nome = "Abacaxi", Cor = "Amarelo", Categoria = "Citrica"}
+        // };
 
-        public IActionResult Index()
+        public async Task <IActionResult> Index()
         {
+            var frutas = await _context.Fruta.ToListAsync();
             return View(frutas);
         }
         public IActionResult FrutasCitricas()
@@ -43,9 +49,9 @@ namespace CadAlunoTorloni.Controllers
         [HttpPost]
         public IActionResult Create(Fruta fruta)
         {
-            fruta.Id = frutas.Max(f => f.Id) + 1;
+            // fruta.Id = frutas.Max(f => f.Id) + 1;
             
-            frutas.Add(fruta);
+            // frutas.Add(fruta);
 
             return RedirectToAction("Index");
         }

@@ -3,6 +3,16 @@
 }
 
 <link rel="stylesheet" href=~/css/login.css">
+
+<script defer>
+    const usuarioNovoCadastrado = "@TempData[key: "UsuarioNovoCadastrado"]";
+
+    if(usuarioNovoCadastrado == "Cadastrado"){
+        alert("Usuario cadastrado com sucesso!")
+    }
+
+</script>
+
 <body>
     <h1>Tela principal login - DevConnect</h1>
     <main>
@@ -30,7 +40,7 @@
             </form>
 
             <section id="secao-cadastro" class="estilo-formulario">
-                <p>Não tem uma conta? <a href="../pages/cadastro.html">Cadastre-se</a></p>
+                <p>Não tem uma conta? <a asp-controller="Usuario"asp-action="Index">Cadastre-se</a></p>
             </section>
 
             <p>Obtenha o aplicativo</p>

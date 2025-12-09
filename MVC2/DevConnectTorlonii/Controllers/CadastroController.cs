@@ -1,13 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
 
+using Microsoft.AspNetCore.Mvc;
 namespace DevConnectTorlonii.Controllers
 {
-
-    public class PerfilController : Controller
+    
+    public class CadastroController : Controller
     {
-        private readonly ILogger<PerfilController> _logger;
+        private readonly ILogger<CadastroController> _logger;
 
-        public PerfilController(ILogger<PerfilController> logger)
+        public CadastroController(ILogger<CadastroController> logger)
         {
             _logger = logger;
         }

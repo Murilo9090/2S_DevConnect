@@ -1,4 +1,7 @@
-<link rel="stylesheet" href="../css/Perfil.css">
+@{
+    ViewData["Title"] = "DevConnect - Perfil";
+}
+<link rel="stylesheet" href="~/css/Perfil.css">
 <header id="cabecalho">
     <nav>
         <a id="logo-desktop" href="./Perfil.html">
@@ -10,7 +13,7 @@
 
         <div class="cabecalho-acoes">
 
-            <a href="#">
+            <a asp-controller="Feed"asp-action="Index">
                 <img src="../images/icone-casa-vermelho.svg" alt="">
             </a>
 
@@ -32,7 +35,7 @@
            <div class="perfil-info">
                <h2>2pac</h2>
                <p>869 publicações</p>
-               <p>10,6 seguidores</p>
+               <p>10,6M seguidores</p>
                <p>2 seguindo</p>
                
                <h3>Tupac Shakur</h3>
